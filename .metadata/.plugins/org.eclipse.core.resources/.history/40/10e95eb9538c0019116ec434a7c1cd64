@@ -1,0 +1,15 @@
+package UnitTesting.UTesting;
+
+import org.junit.Test;
+
+import junit.framework.TestCase;
+
+public class TestCases extends TestCase {
+
+	
+	@Test
+	public void testFunction(){
+		MainClass.functionToTest funct = new functionToTest();
+		
+	}
+}

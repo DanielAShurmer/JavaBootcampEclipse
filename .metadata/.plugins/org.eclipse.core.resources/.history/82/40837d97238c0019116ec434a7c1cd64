@@ -1,0 +1,113 @@
+package classroom;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Ehandler implements ActionListener{
+	TextField Display;
+	int NumberStorage = 0;
+	String Operation = "C";
+	
+	public Ehandler(TextField Dsply) {
+		Display = Dsply;
+	}
+	
+	public void actionPerformed(ActionEvent Trigger) {
+		Button btnPressed = (Button) Trigger.getSource();
+		String chrPressed = btnPressed.getLabel();
+		
+		if (chrPressed.equals("0")) {
+			Display.setText(Display.getText() + "0");
+		}
+		if (chrPressed.equals("1")) {
+			Display.setText(Display.getText() + "1");
+		}
+		if (chrPressed.equals("2")) {
+			Display.setText(Display.getText() + "2");
+		}
+		if (chrPressed.equals("3")) {
+			Display.setText(Display.getText() + "3");
+		}
+		if (chrPressed.equals("4")) {
+			Display.setText(Display.getText() + "4");
+		}
+		if (chrPressed.equals("5")) {
+			Display.setText(Display.getText() + "5");
+		}
+		if (chrPressed.equals("6")) {
+			Display.setText(Display.getText() + "6");
+		}
+		if (chrPressed.equals("7")) {
+			Display.setText(Display.getText() + "7");
+		}
+		if (chrPressed.equals("8")) {
+			Display.setText(Display.getText() + "8");
+		}
+		if (chrPressed.equals("9")) {
+			Display.setText(Display.getText() + "9");
+		}
+		if (chrPressed.equals("+")) {
+			try {
+			NumberStorage = Integer.parseInt(Display.getText());
+			Operation = "+";
+			Display.setText("");
+			}
+			catch(NumberFormatException Err) {
+				System.out.println("Error - Non-Numerical Character In Display");
+			}
+		}
+		if (chrPressed.equals("-")) {
+			try {
+			NumberStorage = Integer.parseInt(Display.getText());
+			Operation = "-";
+			Display.setText("");
+			}
+			catch(NumberFormatException Err) {
+				System.out.println("Error - Non-Numerical Character In Display");
+			}
+		}
+		if (chrPressed.equals("X")) {
+			try {
+			NumberStorage = Integer.parseInt(Display.getText());
+			Operation = "X";
+			Display.setText("");
+			}
+			catch(NumberFormatException Err) {
+				System.out.println("Error - Non-Numerical Character In Display");
+			}
+		}
+		if (chrPressed.equals("/")) {
+			try {
+			NumberStorage = Integer.parseInt(Display.getText());
+			Operation = "/";
+			Display.setText("");
+			}
+			catch(NumberFormatException Err) {
+				System.out.println("Error - Non-Numerical Character In Display");
+			}
+		}
+		if (chrPressed.equals("=")) {
+			try {
+				if (Operation == "+") {
+					Display.setText(Integer.toString(NumberStorage + Integer.parseInt(Display.getText())));
+				}
+				if (Operation == "-") {
+					Display.setText(Integer.toString(NumberStorage - Integer.parseInt(Display.getText())));
+				}
+				if (Operation == "X") {
+					Display.setText(Integer.toString(NumberStorage * Integer.parseInt(Display.getText())));
+				}
+				if (Operation == "/") {
+					Display.setText(Integer.toString(NumberStorage / Integer.parseInt(Display.getText())));
+				}
+			}
+			catch(NumberFormatException Err) {
+				System.out.println("Error - Non-Numerical Character In Display");
+			}
+		}
+		if (chrPressed.equals("C")) { 
+			NumberStorage = 0;
+			Operation = "C";
+			Display.setText("");
+		}	
+	}
+}

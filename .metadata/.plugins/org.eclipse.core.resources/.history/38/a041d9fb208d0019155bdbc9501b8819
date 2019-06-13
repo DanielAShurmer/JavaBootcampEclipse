@@ -1,0 +1,23 @@
+package DatabseLinkOne.DataLink1;
+import java.sql.*;
+
+public class DataLink {
+
+	public static void main(String[] args) {
+		Connection conn = null;
+		Statement stat = null;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/Nationwide","root","password");
+			stat = conn.createStatement();
+			stat.executeUpdate("insert into school values(2, 'Peter', 45)");
+			conn.close();
+			stat.close();
+		}
+		catch(Exception E) {
+			System.out.println(E.toString());
+		}
+
+	}
+
+}

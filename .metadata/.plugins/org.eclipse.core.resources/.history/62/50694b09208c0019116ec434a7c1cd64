@@ -1,0 +1,15 @@
+package classroom;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Ehandler implements ActionListener{
+	TextField Display;
+	public Ehandler(TextField Dsply) {
+		Display = Dsply;
+	}
+	
+	public void actionPerformed(ActionEvent Trigger) {
+		
+	}
+
+}

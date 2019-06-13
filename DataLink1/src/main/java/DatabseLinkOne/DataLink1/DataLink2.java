@@ -1,0 +1,24 @@
+package DatabseLinkOne.DataLink1;
+import java.sql.*;
+
+public class DataLink2 {
+	public static void main(String[] args) {
+		Connection conn = null;
+		Statement stat = null;
+		ResultSet ResSet = null;
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Nationwide?useLegacyDatetimeCode="
+					+ "false&serverTimezone=Europe/London","root","password");
+			stat = conn.createStatement();
+			ResSet = stat.executeQuery("select * from college");
+			while(ResSet.next()) {
+				System.out.println(ResSet.getInt(1)+"..."+ResSet.getString(2)+"..."
+						+ResSet.getString(3)+"..."+ResSet.getInt(4));
+			}
+		}
+		catch(Exception E) {
+			System.out.println(E.toString());
+		}
+	}
+}

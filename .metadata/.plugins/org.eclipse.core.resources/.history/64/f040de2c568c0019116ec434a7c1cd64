@@ -1,0 +1,20 @@
+package RadioButtons.RadButtons;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+
+public class Ehandler implements ActionListener{
+	TextField Input1, Input2, Output;
+	JRadioButton AddOpt, SubOpt;
+	
+	public Ehandler(){
+		
+	}
+	
+	
+	public void actionPerformed(ActionEvent Trigger) {
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package RadioButtons.RadButtons;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Ehandler implements ActionListener{
+	
+	public void actionPerformed(ActionEvent Trigger) {
+		
+	}
+
+}

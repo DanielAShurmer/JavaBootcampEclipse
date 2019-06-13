@@ -1,0 +1,22 @@
+package classroom;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Ehandler implements ActionListener{
+	TextField Display;
+	int NumberStorage;
+	
+	public Ehandler(TextField Dsply) {
+		Display = Dsply;
+	}
+	
+	public void actionPerformed(ActionEvent Trigger) {
+		Button btnPressed = (Button) Trigger.getSource();
+		String chrPressed = btnPressed.getLabel();
+		
+		if (chrPressed.equals("0")) {
+			Display.setText(Display.getText() + "0");
+		}
+	}
+
+}

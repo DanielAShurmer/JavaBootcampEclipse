@@ -1,0 +1,67 @@
+package classroom;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Ehandler implements ActionListener{
+	TextField Display;
+	int NumberStorage = 0;
+	String Operation = "C";
+	
+	public Ehandler(TextField Dsply) {
+		Display = Dsply;
+	}
+	
+	public void actionPerformed(ActionEvent Trigger) {
+		Button btnPressed = (Button) Trigger.getSource();
+		String chrPressed = btnPressed.getLabel();
+		
+		if (chrPressed.equals("0") || chrPressed.equals("1") || chrPressed.equals("2") || chrPressed.equals("3")
+				|| chrPressed.equals("4") || chrPressed.equals("5") || chrPressed.equals("6") 
+				|| chrPressed.equals("7") || chrPressed.equals("8") || chrPressed.equals("9")) {
+			 
+			Display.setText(Display.getText() + chrPressed);
+		}
+		
+		if (chrPressed.equals("+") || chrPressed.equals("-") || chrPressed.equals("X") || chrPressed.equals("/")){
+			try {
+				NumberStorage = Integer.parseInt(Display.getText());
+				Operation = chrPressed;
+				Display.setText("");
+				}
+				catch(NumberFormatException Err) {
+					System.out.println("Error - Non-Numerical Character In Display");
+				}
+		}
+		
+		if (chrPressed.equals("=")) {
+			try {
+				if (Operation == "+") {
+					Display.setText(Integer.toString(NumberStorage + Integer.parseInt(Display.getText())));
+				}
+				if (Operation == "-") {
+					Display.setText(Integer.toString(NumberStorage - Integer.parseInt(Display.getText())));
+				}
+				if (Operation == "X") {
+					Display.setText(Integer.toString(NumberStorage * Integer.parseInt(Display.getText())));
+				}
+				if (Operation == "/") {
+					Display.setText(Integer.toString(NumberStorage / Integer.parseInt(Display.getText())));
+				}
+				if (Operation == "C") {
+					System.out.println("Error - Please Select An Operator Before Equals");
+				}
+			}
+			catch(NumberFormatException Err) {
+				System.out.println("Error - Non-Numerical Character In Display");
+			}
+			catch(ArithmeticException Err) {
+				System.out.println("Error - You Cannot Divide By Zero");
+			}
+		}
+		if (chrPressed.equals("C")) { 
+			NumberStorage = 0;
+			Operation = "C";
+			Display.setText("");
+		}	
+	}
+}

@@ -1,0 +1,26 @@
+package RadioButtons.RadButtons;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+
+public class RadioButtons {
+
+	public static void main(String[] args) {
+		Frame F = new Frame("RadioButtonDemo");
+		GridLayout GL = new GridLayout(2,6);
+		F.setLayout(GL);
+		
+		TextField FirstNumField = new TextField(10);
+		TextField SecondNumField = new TextField(10);
+		TextField ResultNumField = new TextField(10);
+		
+		JRadioButton addButton = new JRadioButton("Addition",true);
+		JRadioButton subButton = new JRadioButton("Subtraction");
+		
+		ButtonGroup R
+		
+
+	}
+
+}
