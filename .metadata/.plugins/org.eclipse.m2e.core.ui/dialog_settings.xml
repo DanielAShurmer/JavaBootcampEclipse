@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Daniel\eclipse-workspace\DataLink1"/>
 			<item value="C:\Users\Daniel\eclipse-workspace\RadButtons\src\main\java\RadioButtons\RadButtons\RadioButtons.java"/>
 			<item value="C:\Users\Daniel\eclipse-workspace\room\src\main\java\classroom\Calculator.java"/>
 			<item value="C:\Users\Daniel\eclipse-workspace"/>
@@ -28,18 +29,21 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="BasicScanner.BasicScannr"/>
 			<item value="DatabseLinkOne.DataLink1"/>
 			<item value="UnitTesting.UTesting"/>
 			<item value="RadioButtons.RadButtons"/>
 			<item value="classroom"/>
 		</list>
 		<list key="groupId">
+			<item value="BasicScanner"/>
 			<item value="DatabseLinkOne"/>
 			<item value="UnitTesting"/>
 			<item value="RadioButtons"/>
 			<item value="Classroom"/>
 		</list>
 		<list key="artifactId">
+			<item value="BasicScannr"/>
 			<item value="DataLink1"/>
 			<item value="UTesting"/>
 			<item value="RadButtons"/>

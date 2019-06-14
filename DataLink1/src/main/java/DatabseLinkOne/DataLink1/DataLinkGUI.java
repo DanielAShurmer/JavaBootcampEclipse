@@ -17,6 +17,7 @@ public class DataLinkGUI {
 		Label ThirdLbl = new Label("Marks:");
 		Label BlankLbl = new Label("");
 		
+		
 		GUILinkEHandler EHandl = new GUILinkEHandler(FirstInput, SecondInput, ThirdInput);
 		Button addButton = new Button("Add To Database");
 		addButton.addActionListener(EHandl);
